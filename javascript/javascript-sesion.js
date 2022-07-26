@@ -91,7 +91,7 @@ function realizarOperacion(){
     }else{
       mostrarAlertError("EL campo no puede estar vacio")  
     }
-    timeout = setTimeout(alertMensaje, 2000);
+    timeout = setTimeout(alertMensaje, 2500);
   }
   function mostrarAlertError(text){
       alertError.style.display="flex";

@@ -9,6 +9,9 @@ body{
 .container {
     max-width: 800px!important;
 }
+h1 {
+    font-size: calc(1rem + 1.5vw) !important;
+}
 button.btn.btn-primary.btn-inicio-sesion, .btn-success, .btn-cerrar-sesion {
     width: 100%!important;
 }
@@ -17,6 +20,9 @@ input#operaciones-cliente, button#operacion-a-realizar {
     outline: none;
     margin:auto;
     width:80%!important;
+}
+button#btn-cerrar-sesion {
+    margin-bottom: 8px!important;
 }
 button#operacion-a-realizar {
     margin-bottom: 16px;
@@ -41,4 +47,10 @@ div#alert-msg,div#alert-sucess {
 p#text-alert, p#text-alert-sucees {
     font-size: 12px;
     margin: 2px;
+}
+
+@media screen and (max-width:200px) {
+    *{
+        font-size: calc(1rem + 1vw) !important;  
+    }
 }

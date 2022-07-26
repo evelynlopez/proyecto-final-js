@@ -29,6 +29,9 @@ if(sesion=="activa"){
     function activarAlert(message){
         alert.style.display= "block";
         pAlert.innerHTML= message;
+        setTimeout(function(){
+            alert.style.display= "none";
+        }, 3000); 
     }
     function validarCampos(){
         if(email.value == ''){
