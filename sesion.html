@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style/styles-sesion.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+</head>
+<body>
+        <div class="container m-auto ban">
+            <div class="row">
+                <div class="col-md-12 b-sesion text-center bg-body mt-1">
+                    <h1 id="text-landing">Bienvenido a tu cuenta de ahorros!</h1>
+                    <h1 id="bienvenido"></h1>
+                </div>
+            </div>
+            <div class="row" id="row-operaciones">
+                <div class="col-md-6 b-sesion text-center mt-1">
+                    <div class="col-sm-12 mt-4" id="operaciones">
+                        <p id="descripcion">selecciona una operacion -></p>
+                        <p id="monto"></p>
+                        <input type="text" id="operaciones-cliente" class="mb-4" onkeypress="return valideKey(event);" maxlength="3">
+                        <div class="alert alert-danger" role="alert" id="alert-msg">
+                            <p id="text-alert"></p><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x-lg" viewBox="0 0 16 16">
+                                <path d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8 2.146 2.854Z"/>
+                              </svg>
+                        </div>
+                        <div class="alert alert-success" role="alert" id="alert-sucess">
+                            <p id="text-alert-sucees"></p><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check-circle" viewBox="0 0 16 16">
+                                <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+                                <path d="M10.97 4.97a.235.235 0 0 0-.02.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-1.071-1.05z"/>
+                              </svg>
+                        </div>
+                        <button type="button" id="operacion-a-realizar" class="btn btn-success btn-inicio-sesion" onclick="realizarOperacion()">Realizar Operaci&oacute;n</button>  
+                    </div>
+                </div>
+                <div class="col-md-6 b-sesion text-center mt-1">
+                    <div class="col-sm-12 mt-4">
+                        <button type="button" class="btn btn-primary btn-inicio-sesion" onclick="consultarSaldo()" id="btn-cs">Consultar saldo</button>  
+                    </div>
+                        <div class="col-sm-12 mt-4">
+                        <button type="button" class="btn btn-primary btn-inicio-sesion" onclick="ingresarMonto()" id="btn-is">Ingresar monto</button>
+                    </div>
+                        <div class="col-sm-12 mt-4">
+                        <button type="button" class="btn btn-primary btn-inicio-sesion" onclick="retirarMonto()" id="btn-rm">Retirar monto</button>
+                    </div>
+                        <div class="col-sm-12 mt-4">
+                        <button id="btn-cerrar-sesion" type="button" class="btn btn-primary btn-cerrar-sesion" onclick="cerrarSesion()">Cerrar sesi&oacute;n</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    <script src="javascript/javascript-sesion.js" async></script>
+    <script>
+        window.onload = function() {
+            bienvenida()
+        };
+    </script>
+    
+</body>
+</html>

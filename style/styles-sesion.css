@@ -1,0 +1,44 @@
+*{
+    font-family: monospace!important;
+    font-size: 24px;
+}
+body{
+    height: 100vh;
+    background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
+}
+.container {
+    max-width: 800px!important;
+}
+button.btn.btn-primary.btn-inicio-sesion, .btn-success, .btn-cerrar-sesion {
+    width: 100%!important;
+}
+input#operaciones-cliente, button#operacion-a-realizar {
+    display:none;
+    outline: none;
+    margin:auto;
+    width:80%!important;
+}
+button#operacion-a-realizar {
+    margin-bottom: 16px;
+}
+button.btn.btn-primary.btn-inicio-sesion {
+    background: fixed;
+    color: #000;
+}
+p#descripcion {
+    padding-top: 20px;
+    background: azure;
+}
+div#alert-msg,div#alert-sucess {
+    display: none;
+    padding: 8px;
+    width: 80%;
+    margin: auto;
+    margin-bottom: 16px;
+    justify-content: center;
+    align-items: center;
+}
+p#text-alert, p#text-alert-sucees {
+    font-size: 12px;
+    margin: 2px;
+}
