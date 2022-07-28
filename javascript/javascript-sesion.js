@@ -141,8 +141,8 @@ function cerrarSesion(){
     document.getElementById("text-landing").innerText=localStorage.getItem("name")+" recuerda que el mejor momento del día es el ahora ";
     setTimeout(function(){
       localStorage.clear();
-      window.location.assign("home.html")
-    }, 3000); 
+      window.location.assign("index.html")
+    }, 3000);
 }
 function consultarMovimientos(){
   document.getElementById("consultarsaldo").style.display="flex"
