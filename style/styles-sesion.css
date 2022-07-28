@@ -48,7 +48,37 @@ p#text-alert, p#text-alert-sucees {
     font-size: 12px;
     margin: 2px;
 }
-
+div#consultarsaldo {
+    display: flex;
+}
+div#consultarsaldo p {
+    font-size: 12px!important;
+}
+h3{
+    font-size: 16px !important;
+}
+div#saldo {
+    margin: auto!important;
+    max-width: 800px !important;
+}
+div#btnconsultarsaldo {
+    background: transparent!important;
+    display: none;
+}
+div#operaciones {
+    max-width: 358px;
+    margin:auto;
+}
+input#operaciones-cliente {
+    background: transparent;
+    border-radius: 4px !important;
+    max-width: 281px;
+}
+@media screen and (max-width:600px) {
+    #btn-cm,#saldo{
+        display: none;
+    }
+}
 @media screen and (max-width:200px) {
     *{
         font-size: calc(1rem + 1vw) !important;  

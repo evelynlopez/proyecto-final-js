@@ -12,20 +12,19 @@
         <div class="container m-auto ban">
             <div class="row">
                 <div class="col-md-12 b-sesion text-center bg-body mt-1">
-                    <h1 id="text-landing">Bienvenido a tu cuenta de ahorros!</h1>
+                    <h1 id="text-landing">Bienvenido a tu cuenta de ahorros</h1>
                     <h1 id="bienvenido"></h1>
                 </div>
             </div>
             <div class="row" id="row-operaciones">
                 <div class="col-md-6 b-sesion text-center mt-1">
                     <div class="col-sm-12 mt-4" id="operaciones">
-                        <p id="descripcion">selecciona una operacion-></p>
+                        <p id="descripcion">Selecciona una operaci&oacute;n-></p>
+                        <p id="recordatorio">Recuerda, no se aceptan operaciones en centavos</p>
                         <p id="monto"></p>
                         <input type="text" id="operaciones-cliente" class="mb-4" onkeypress="return valideKey(event);" maxlength="3">
                         <div class="alert alert-danger" role="alert" id="alert-msg">
-                            <p id="text-alert"></p><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x-lg" viewBox="0 0 16 16">
-                                <path d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8 2.146 2.854Z"/>
-                              </svg>
+                            <p id="text-alert"></p>
                         </div>
                         <div class="alert alert-success" role="alert" id="alert-sucess">
                             <p id="text-alert-sucees"></p><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check-circle" viewBox="0 0 16 16">
@@ -36,22 +35,37 @@
                         <button type="button" id="operacion-a-realizar" class="btn btn-success btn-inicio-sesion" onclick="realizarOperacion()">Realizar Operaci&oacute;n</button>  
                     </div>
                 </div>
-                <div class="col-md-6 b-sesion text-center mt-1">
+                <div class="col-md-6 b-sesion text-center mt-1" id="buttons">
                     <div class="col-sm-12 mt-4">
                         <button type="button" class="btn btn-primary btn-inicio-sesion" onclick="consultarSaldo()" id="btn-cs">Consultar saldo</button>  
                     </div>
-                        <div class="col-sm-12 mt-4">
+                    <div class="col-sm-12 mt-4">
                         <button type="button" class="btn btn-primary btn-inicio-sesion" onclick="ingresarMonto()" id="btn-is">Ingresar monto</button>
                     </div>
-                        <div class="col-sm-12 mt-4">
+                    <div class="col-sm-12 mt-4">
                         <button type="button" class="btn btn-primary btn-inicio-sesion" onclick="retirarMonto()" id="btn-rm">Retirar monto</button>
                     </div>
-                        <div class="col-sm-12 mt-4">
+                    <div class="col-sm-12 mt-4">
+                        <button type="button" class="btn btn-primary btn-inicio-sesion" onclick="consultarMovimientos()" id="btn-cm">Consultar movimientos</button>
+                    </div>
+                    <div class="col-sm-12 mt-4">
                         <button id="btn-cerrar-sesion" type="button" class="btn btn-primary btn-cerrar-sesion" onclick="cerrarSesion()">Cerrar sesi&oacute;n</button>
                     </div>
                 </div>
             </div>
         </div>
+            <div class="row mt-4" id="saldo" >
+                <div class="col-md-12 b-sesion text-center bg-body mt-1" id="consultarsaldo">
+                    <div class="col-sm-4" id="fechamov"></div>
+                    <div class="col-sm-2" id="tipomov"></div>
+                    <div class="col-sm-2" id="montoinput"></div>
+                    <div class="col-sm-2" id="nuevosaldo"></div>   
+                    <div class="col-sm-2" id="saldoanterior"></div> 
+                </div>
+                <div class="col-md-3 b-sesion text-center bg-body mt-1" id="btnconsultarsaldo">
+                    <button id="Regresar" type="button" class="btn btn-primary btn-cerrar-sesion" onclick="regresar()">Regresar</button>     
+                </div>
+            </div>
     <script src="javascript/javascript-sesion.js" async></script>
     <script>
         window.onload = function() {
